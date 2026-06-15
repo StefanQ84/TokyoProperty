@@ -1,0 +1,70 @@
+{
+  "marqueeItems": [
+    "Permanent Freehold", "东京核心地段", "High Yield Returns", "稳定租赁市场",
+    "Full Chinese Support", "永久产权", "Premium Tokyo Estates", "低空置率",
+    "Permanent Freehold", "东京核心地段", "High Yield Returns", "稳定租赁市场",
+    "Full Chinese Support", "永久产权", "Premium Tokyo Estates", "低空置率"
+  ],
+  "comparisonRows": [
+    {
+      "type": "江东区大岛 1F 店铺",
+      "year": "1992年",
+      "area": "34.12㎡",
+      "district": "江东区大岛",
+      "rent": "S$ 2,323.2",
+      "rate": "5.2%（净）",
+      "position": "商业店铺·带租即用",
+      "tag": "entry",
+      "tagLabel": "净回报最高",
+      "tagClass": "tag-entry"
+    },
+    {
+      "type": "川崎市商业办公物业",
+      "year": "1980年",
+      "area": "427.11㎡",
+      "district": "川崎市（近东京）",
+      "rent": "S$ 12,913",
+      "rate": "5.1%（净）",
+      "position": "大面积办公·带租约",
+      "tag": "bulk",
+      "tagLabel": "大面积高回报",
+      "tagClass": "tag-bulk"
+    },
+    {
+      "type": "高田马场 1F 大面积店铺",
+      "year": "1989年",
+      "area": "198.12㎡",
+      "district": "新宿区·高田马场",
+      "rent": "S$ 7,378.8",
+      "rate": "5.0%（净）",
+      "position": "餐饮零售·稳定客流",
+      "tag": "bulk",
+      "tagLabel": "旗舰商铺",
+      "tagClass": "tag-bulk"
+    },
+    {
+      "type": "新宿一室投资公寓",
+      "year": "1997年",
+      "area": "16.6㎡",
+      "district": "新宿核心区",
+      "rent": "S$ 668.8",
+      "rate": "4.85%",
+      "position": "住宅入门·稳健现金流",
+      "tag": "mid",
+      "tagLabel": "住宅入门",
+      "tagClass": "tag-mid"
+    },
+    {
+      "type": "池袋事务所型小型办公",
+      "year": "1989年",
+      "area": "24.06㎡",
+      "district": "池袋核心区",
+      "rent": "S$ 1,548.8",
+      "rate": "4.8%（净）",
+      "position": "小型办公·低持有成本",
+      "tag": "entry",
+      "tagLabel": "办公入门",
+      "tagClass": "tag-entry"
+    }
+  ]
+}

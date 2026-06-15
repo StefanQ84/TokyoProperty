@@ -1,0 +1,455 @@
+[
+  {
+    "id": "p1",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "新宿一室投资公寓",
+    "location": "东京新宿区西新宿 · 大江户线6分钟 · 山手线12分钟",
+    "price": "S$ 165,722",
+    "priceSub": "参考：¥18,832,045日元",
+    "yieldVal": "4.85%",
+    "yieldLabel": "年化回报",
+    "specVal": "16.6㎡",
+    "specLabel": "专有面积",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1ty86jjGibRuUmaJP5wonFfuammvVEygY",
+      "https://lh3.googleusercontent.com/d/1Zx-ghH6xEhHlxC_K4e_NYPrmFMOkI5id"
+    ],
+    "financial": [
+      { "label": "月租金（日元）", "value": "¥76,000" },
+      { "label": "月租金（新币）", "value": "S$ 668.8" },
+      { "label": "年净收入（日元）", "value": "¥696,000" },
+      { "label": "年净收入（新币）", "value": "S$ 6,124.8" },
+      { "label": "年化回报", "value": "4.85%", "highlight": true },
+      { "label": "产权", "value": "永久产权" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1997年10月" },
+      { "label": "专有面积", "value": "16.6㎡" },
+      { "label": "阳台面积", "value": "6.4㎡" },
+      { "label": "户型", "value": "1室1厅" },
+      { "label": "至都营大江户线/新宿西口站", "value": "步行6分钟" },
+      { "label": "至JR山手线新宿站", "value": "步行12分钟" }
+    ],
+    "highlights": [
+      "东京核心CBD地段，新宿区人流量极高",
+      "单身上班族/学生租客稳定，出租率接近满租",
+      "入门门槛低，适合新加坡投资者首次试水日本市场",
+      "永久产权，长期持有价值稳健"
+    ]
+  },
+  {
+    "id": "p2",
+    "tag": "整栋出租",
+    "tagClass": "tag-whole",
+    "name": "池袋整栋出租业务",
+    "location": "东京都丰岛区池袋 · JR山手线/副都心线步行12分钟",
+    "price": "联系询价",
+    "priceSub": "满租运营中",
+    "yieldVal": "4.23%",
+    "yieldLabel": "年化回报",
+    "specVal": "317.28㎡",
+    "specLabel": "建筑总面积",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1iu5h2dykMq2V6XtA54JKzFeA1tfS3BrI",
+      "https://lh3.googleusercontent.com/d/1T109eeYAEtdwtRFQ0j0LDpJRxqdb5Xc1"
+    ],
+    "financial": [
+      { "label": "整栋月收入（日元）", "value": "¥1,049,356" },
+      { "label": "整栋月收入（新币）", "value": "S$ 9,234.3" },
+      { "label": "年收入（日元）", "value": "¥12,592,272" },
+      { "label": "年收入（新币）", "value": "S$ 110,812" },
+      { "label": "年化回报", "value": "4.23%", "highlight": true },
+      { "label": "运营状态", "value": "满租运营" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1997年2月" },
+      { "label": "单户专有面积", "value": "20.44㎡" },
+      { "label": "整栋建筑面积", "value": "317.28㎡" },
+      { "label": "楼层", "value": "地上4层" },
+      { "label": "业态", "value": "店铺 + 事务所 + 住宅" },
+      { "label": "至JR池袋站", "value": "步行12分钟" }
+    ],
+    "highlights": [
+      "满租运营，购入即有稳定现金流",
+      "多业态混合经营（商业+办公+住宅），租客多元降低空置风险",
+      "池袋站商圈，商业氛围成熟稳定",
+      "可改造为留学生宿舍，租金与运营双重收益"
+    ]
+  },
+  {
+    "id": "p3",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "一户建独栋住宅",
+    "location": "东京近郊宜居区域 · 生活配套完善",
+    "price": "联系询价",
+    "priceSub": "新建现房",
+    "yieldVal": "3.5–4.5%",
+    "yieldLabel": "出租参考回报",
+    "specVal": "120–150㎡",
+    "specLabel": "土地私有",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1V1Djf5BbCFhyImwuUmvqkBBRsHFAwDVK",
+      "https://lh3.googleusercontent.com/d/1xbkYZ5DoewC2_S6gPRJmQjrtpuBlQ3XT",
+      "https://lh3.googleusercontent.com/d/1EI6BlnEmQz8GoQshIg4nmXSTtHPvo85u",
+      "https://lh3.googleusercontent.com/d/14BeFRi00K9TIlY2b1c1AA1pIHeMM1M02"
+    ],
+    "financial": [
+      { "label": "自住定位", "value": "自住为主" },
+      { "label": "出租月租（日元）", "value": "¥250,000–400,000" },
+      { "label": "出租月租（新币）", "value": "S$ 2,200–3,520" },
+      { "label": "出租年化回报（参考）", "value": "3.5%–4.5%", "highlight": true },
+      { "label": "产权", "value": "永久产权" },
+      { "label": "土地", "value": "私有地" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "新建现房" },
+      { "label": "建筑面积", "value": "约120–150㎡" },
+      { "label": "土地性质", "value": "私有地（永久产权）" },
+      { "label": "地段", "value": "东京近郊宜居区域" },
+      { "label": "配套", "value": "生活设施完善" },
+      { "label": "适合人群", "value": "家庭自住 / 子女留学" }
+    ],
+    "highlights": [
+      "私密性高、空间灵活，适合家庭自住或子女留学居住",
+      "永久产权独栋，长期保值性强，资产可传承",
+      "近郊宜居区域，生活配套完善，居住舒适度高",
+      "日本新建住宅品质有保障，配备现代化设施"
+    ]
+  },
+  {
+    "id": "p4",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "芝浦岛格罗罗天塔楼",
+    "location": "东京都港区芝浦 · JR田町站步行9分钟 · 直面彩虹桥东京湾",
+    "price": "S$ 2,097,970",
+    "priceSub": "参考：¥23,800万日元",
+    "yieldVal": "3.3–3.5%",
+    "yieldLabel": "年化回报",
+    "specVal": "83.80㎡",
+    "specLabel": "2LDK + WIC",
+    "images": [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=600&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80"
+    ],
+    "financial": [
+      { "label": "月租金（日元）", "value": "¥333,000–355,000" },
+      { "label": "月租金（新币）", "value": "S$ 2,930.4–3,124" },
+      { "label": "年化回报", "value": "3.3%–3.5%", "highlight": true },
+      { "label": "装修状态", "value": "全新内装" },
+      { "label": "管理服务", "value": "24小时专人管理" },
+      { "label": "产权", "value": "永久产权" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "2006年" },
+      { "label": "专有面积", "value": "83.80㎡" },
+      { "label": "阳台面积", "value": "12.20㎡" },
+      { "label": "户型", "value": "2LDK + WIC" },
+      { "label": "至JR山手线田町站", "value": "步行9分钟" },
+      { "label": "景观", "value": "直面彩虹桥·东京湾" }
+    ],
+    "highlights": [
+      "直面彩虹桥东京湾，城市地标景观不可复制",
+      "24小时专人安保管理，顶级居住社区体验",
+      "港区核心，稀缺地段资产，抗跌性极强",
+      "全新内装，拎包入住，出租吸引力强"
+    ]
+  },
+  {
+    "id": "p5",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "大崎西城塔楼 W 栋",
+    "location": "东京都品川区大崎 · 大崎站直连步行1分钟 · 双子塔地标",
+    "price": "S$ 2,891,320",
+    "priceSub": "参考：¥32,800万日元",
+    "yieldVal": "3.2–3.4%",
+    "yieldLabel": "年化回报",
+    "specVal": "109.14㎡",
+    "specLabel": "挑高复式 2LDK",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1IrbyCSDo4wXbvA2KLqPR0z_ztgCOM24F",
+      "https://lh3.googleusercontent.com/d/1z_7q6vthIxRuwO9ibvvFjSAfDHpj-0ph",
+      "https://lh3.googleusercontent.com/d/1fP8n8JmIEGUMFVZmkMJJUkx7iUuFZfOq",
+      "https://lh3.googleusercontent.com/d/1VhdpHElEUF3ti07BIKerG66ecAhOrYsN"
+    ],
+    "financial": [
+      { "label": "月租金（日元）", "value": "¥420,000–480,000" },
+      { "label": "月租金（新币）", "value": "S$ 3,696–4,224" },
+      { "label": "年化回报", "value": "3.2%–3.4%", "highlight": true },
+      { "label": "装修状态", "value": "全新装修" },
+      { "label": "大崎站", "value": "步行1分钟直达" },
+      { "label": "产权", "value": "永久产权" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "2009年" },
+      { "label": "专有面积", "value": "109.14㎡" },
+      { "label": "阳台面积", "value": "5.39㎡" },
+      { "label": "户型", "value": "挑高复式 2LDK + WIC" },
+      { "label": "至大崎站", "value": "步行1分钟（直连）" },
+      { "label": "建筑特点", "value": "双子塔地标建筑" }
+    ],
+    "highlights": [
+      "大崎站步行1分钟直达，交通便利极致",
+      "挑高复式户型，超大采光面，居住体验稀缺",
+      "全新装修，适合高端自住或外籍高管租客",
+      "品川区地标建筑，长期增值潜力强"
+    ]
+  },
+  {
+    "id": "p6",
+    "tag": "整栋出售",
+    "tagClass": "tag-whole",
+    "name": "百人町三丁目整栋收租楼",
+    "location": "东京都新宿区百人町 · JR总武/山手线4条线路10–17分钟可达",
+    "price": "S$ 2,626,870",
+    "priceSub": "参考：¥298,508,750日元",
+    "yieldVal": "4.23%",
+    "yieldLabel": "年化回报",
+    "specVal": "317.28㎡",
+    "specLabel": "4层整栋",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1C5bj4-2Pwqp9irP0LfJvgeBdzBJpkO1H",
+      "https://lh3.googleusercontent.com/d/1jBOCIUFTN2SwAHW_LSOf7aT3eUzVx5L2"
+    ],
+    "financial": [
+      { "label": "月收入（日元）", "value": "¥1,049,356" },
+      { "label": "月收入（新币）", "value": "S$ 9,234.3" },
+      { "label": "年收入（日元）", "value": "¥12,592,272" },
+      { "label": "年收入（新币）", "value": "S$ 110,812" },
+      { "label": "年化回报", "value": "4.23%", "highlight": true },
+      { "label": "运营状态", "value": "满租运营" }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1985年" },
+      { "label": "建筑总面积", "value": "317.28㎡" },
+      { "label": "土地面积", "value": "135.16㎡" },
+      { "label": "楼层", "value": "地上4层" },
+      { "label": "业态", "value": "店铺 + 事务所 + 住宅" },
+      { "label": "产权", "value": "永久产权" }
+    ],
+    "highlights": [
+      "新宿区核心，4条地铁线辐射多方向，通勤便捷",
+      "满租运营，多业态降低空置风险，现金流稳健",
+      "可改造为留学生宿舍，实现租金与运营双重收益",
+      "永久产权整栋物业，新宿区稀缺资产配置首选"
+    ]
+  },
+  {
+    "id": "p7",
+    "tag": "整栋出售",
+    "tagClass": "tag-whole",
+    "name": "新宿区商住两用整栋空楼",
+    "location": "东京都新宿区 · 都电荒川线「早稻田」站步行1分钟 · 东西线步行9分钟 · 距早稻田大学5分钟",
+    "price": "S$ 6,875,700",
+    "priceSub": "参考：¥7.8亿日元",
+    "yieldVal": "4.5%",
+    "yieldLabel": "年化回报",
+    "specVal": "474.69㎡",
+    "specLabel": "8层整栋",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1kzWGEitQ5Jhc1XvD7N31M4bZg0BLSqRL",
+      "https://lh3.googleusercontent.com/d/1dI6Ulnm-O49sQ5tJTsAQzQ6CTqA4Pkzm"
+    ],
+    "financial": [
+      { "label": "价格（新币）", "value": "S$ 6,875,700" },
+      { "label": "参考价格（日元）", "value": "¥7.8亿" },
+      { "label": "年租金收益（日元）", "value": "约¥3,510万" },
+      { "label": "年租金收益（新币）", "value": "约S$ 308,880" },
+      { "label": "月租金收益（日元）", "value": "约¥292.5万" },
+      { "label": "月租金收益（新币）", "value": "约S$ 25,740" },
+      { "label": "年化回报", "value": "4.5%", "highlight": true }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "2020年（铁骨造）" },
+      { "label": "土地面积", "value": "88.86㎡" },
+      { "label": "建筑总面积", "value": "474.69㎡" },
+      { "label": "楼层", "value": "地上8层（含电梯）" },
+      { "label": "地块", "value": "角地，南侧道路宽27m·东侧7.2m" },
+      { "label": "产权", "value": "永久产权" }
+    ],
+    "highlights": [
+      "紧邻早稻田大学，步行5分钟，租赁需求长期稳定",
+      "2020年新建铁骨造，检查资格证齐全，品质有保障",
+      "商住两用，可灵活规划为店铺+事务所+住宅",
+      "角地+南侧27米宽阔道路，资产保值性极高",
+      "配备电梯、门禁及24小时监控，管理便捷"
+    ]
+  },
+  {
+    "id": "p8",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "江东区大岛 1F 店铺",
+    "location": "东京都江东区大岛5丁目 · 都营新宿线「大岛」站步行3分钟",
+    "price": "S$ 464,112",
+    "priceSub": "参考：¥5,274万日元",
+    "yieldVal": "5.2%",
+    "yieldLabel": "年化净回报",
+    "specVal": "34.12㎡",
+    "specLabel": "1F 店铺",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1UV9p0HyaMLYYP5n-NP8lQY01wYOnn84M",
+      "https://lh3.googleusercontent.com/d/1w_CUICoBVxjc2hpja__Lp4sbkW9DpTXx",
+      "https://lh3.googleusercontent.com/d/1r9hi4brt5_X-1N67_U3-5S6UB8e-atgY",
+      "https://lh3.googleusercontent.com/d/1KfqqZEMFEVaHiAnJC1BO-xOaZtUKFIKC"
+    ],
+    "financial": [
+      { "label": "售价（新币）", "value": "S$ 464,112" },
+      { "label": "参考价（日元）", "value": "¥5,274万" },
+      { "label": "满室月租（日元）", "value": "¥264,000" },
+      { "label": "满室月租（新币）", "value": "S$ 2,323.2" },
+      { "label": "年租金收入（日元）", "value": "¥3,168,000" },
+      { "label": "毛回报率", "value": "6.0%" },
+      { "label": "年净收益（日元）", "value": "¥2,748,492" },
+      { "label": "年化净回报", "value": "5.2%", "highlight": true }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1992年4月（SRC结构·12层）" },
+      { "label": "专有面积", "value": "34.12㎡（约10.32坪）" },
+      { "label": "用途", "value": "店铺（可做饮食店）" },
+      { "label": "至都营新宿线大岛站", "value": "步行3分钟" },
+      { "label": "抗震标准", "value": "符合新耐震标准" },
+      { "label": "现状", "value": "空家，可即时出租/自用" }
+    ],
+    "highlights": [
+      "步行3分钟到都营新宿线大岛站，通勤与客流双重保障",
+      "商业地域+准工业地域，可做饮食店，用途灵活",
+      "净回报5.2%，毛回报6.0%，在东京核心区属较高水平",
+      "SRC结构符合新耐震标准，建筑安全性强，配备电梯",
+      "空家现状，购入后可立即出租或自用，入手灵活"
+    ]
+  },
+  {
+    "id": "p9",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "川崎市商业办公大面积物业",
+    "location": "神奈川县川崎市川崎区砂子 · JR东海道线「川崎」站步行6分钟",
+    "price": "S$ 2,444,464",
+    "priceSub": "参考：¥27,778万日元",
+    "yieldVal": "5.1%",
+    "yieldLabel": "年化净回报",
+    "specVal": "427.11㎡",
+    "specLabel": "2F 商业办公",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1OSjEAzgbW8IxXD5r_UKeguQsZuiYVdt9",
+      "https://lh3.googleusercontent.com/d/1NvLj-KdfCPMzaoZFrG2-czgLUtp-q2r_",
+      "https://lh3.googleusercontent.com/d/11ucIyC06XaCqVPTIjls57tRRvpJT6Y7I",
+      "https://lh3.googleusercontent.com/d/1Qtc1EuZPBIyekl4Ek_JLZVVKNyD-YEXs"
+    ],
+    "financial": [
+      { "label": "售价（新币）", "value": "S$ 2,444,464" },
+      { "label": "参考价（日元）", "value": "¥27,778万" },
+      { "label": "月租金（日元）", "value": "¥1,467,395" },
+      { "label": "月租金（新币）", "value": "S$ 12,913" },
+      { "label": "年租金收入（日元）", "value": "¥17,608,740" },
+      { "label": "毛回报率", "value": "6.3%" },
+      { "label": "年净收益（日元）", "value": "¥14,131,548" },
+      { "label": "年化净回报", "value": "5.1%", "highlight": true }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1980年11月（SRC结构·地下1+地上14层）" },
+      { "label": "专有面积", "value": "427.11㎡（约129.2坪）" },
+      { "label": "用途", "value": "店铺・事务所（商业地域）" },
+      { "label": "至JR川崎站", "value": "步行6分钟" },
+      { "label": "现状", "value": "带租约出售，购入即有现金流" },
+      { "label": "配套", "value": "配备电梯" }
+    ],
+    "highlights": [
+      "JR川崎站步行6分钟，紧邻东京都心，商务客流密集",
+      "带租约出售，购入即获稳定现金流，无空窗期",
+      "427㎡大面积物业，适合企业办公或大型店铺，租金基数高",
+      "净回报5.1%、毛回报6.3%，在东京圈商业物业中属较高水平",
+      "商业地域，可作店铺或事务所，业态灵活"
+    ]
+  },
+  {
+    "id": "p10",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "池袋事务所型小型办公物业",
+    "location": "东京都丰岛区南池袋 · JR山手线「池袋」站步行6分钟",
+    "price": "S$ 352,352",
+    "priceSub": "参考：¥4,004万日元",
+    "yieldVal": "4.8%",
+    "yieldLabel": "年化净回报",
+    "specVal": "24.06㎡",
+    "specLabel": "3F 事务所",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1Yp7kyGUS_PvsMhcFrkg7Bubm6oKrSqUm",
+      "https://lh3.googleusercontent.com/d/1yA6PA2bvsoJI144GDPiA-GnVhN1k1flI"
+    ],
+    "financial": [
+      { "label": "售价（新币）", "value": "S$ 352,352" },
+      { "label": "参考价（日元）", "value": "¥4,004万" },
+      { "label": "满室月租（日元）", "value": "¥176,000" },
+      { "label": "满室月租（新币）", "value": "S$ 1,548.8" },
+      { "label": "年租金收入（日元）", "value": "¥2,112,000" },
+      { "label": "毛回报率", "value": "5.3%" },
+      { "label": "年净收益（日元）", "value": "¥1,905,528" },
+      { "label": "年化净回报", "value": "4.8%", "highlight": true }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1989年2月（SRC·RC结构·地下1+地上10层）" },
+      { "label": "专有面积", "value": "24.06㎡（约7.28坪）" },
+      { "label": "用途", "value": "事务所（可自用或出租）" },
+      { "label": "至JR山手线池袋站", "value": "步行6分钟" },
+      { "label": "抗震标准", "value": "符合新耐震标准" },
+      { "label": "现状", "value": "空家，可即时出租/自用" }
+    ],
+    "highlights": [
+      "步行6分钟到山手线池袋站，东京核心枢纽，商务需求旺盛",
+      "符合新耐震标准，抗震安全性高，未来改造压力小",
+      "月持有成本仅约¥13,030，占月租不到10%，现金流压力极小",
+      "空家状态，买入即可立刻出租或自用，无租约限制",
+      "配备电梯、自动锁、宅配箱，适合小型创业公司或个人工作室"
+    ]
+  },
+  {
+    "id": "p11",
+    "tag": "出售",
+    "tagClass": "tag-sale",
+    "name": "高田马场 1F 大面积店铺",
+    "location": "东京都新宿区高田马场4丁目 · JR山手线「高田马场」站步行12分钟",
+    "price": "S$ 1,376,496",
+    "priceSub": "参考：¥15,642万日元",
+    "yieldVal": "5.0%",
+    "yieldLabel": "年化净回报",
+    "specVal": "198.12㎡",
+    "specLabel": "1F 大面积店铺",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1JjzTjwlZyO7zM4WpB-o5-Dz5B7T8ZUE_",
+      "https://lh3.googleusercontent.com/d/1X9fJ1C9h2bb5Ep4IvUkYkNd0Ve8nKkj0",
+      "https://lh3.googleusercontent.com/d/1pvoZIU3LnrNJYZcCUcn105z7N8trWlLm",
+      "https://lh3.googleusercontent.com/d/1iHZ-op7G11NGRQCm5c_OI89MzkJyE6Gi"
+    ],
+    "financial": [
+      { "label": "售价（新币）", "value": "S$ 1,376,496" },
+      { "label": "参考价（日元）", "value": "¥15,642万" },
+      { "label": "月租金（日元）", "value": "¥838,500" },
+      { "label": "月租金（新币）", "value": "S$ 7,378.8" },
+      { "label": "年租金收入（日元）", "value": "¥10,062,000" },
+      { "label": "毛回报率", "value": "6.4%" },
+      { "label": "年净收益（日元）", "value": "¥7,779,168" },
+      { "label": "年化净回报", "value": "5.0%", "highlight": true }
+    ],
+    "specs": [
+      { "label": "建筑年份", "value": "1989年3月（SRC结构·9层）" },
+      { "label": "专有面积", "value": "198.12㎡（约59.93坪）" },
+      { "label": "用途", "value": "店铺（可做饮食店）" },
+      { "label": "至JR山手线高田马场站", "value": "步行12分钟" },
+      { "label": "抗震标准", "value": "符合新耐震标准" },
+      { "label": "现状", "value": "带租约出售，购入即有现金流" }
+    ],
+    "highlights": [
+      "紧邻早稻田大学，学生+上班族客流稳定，餐饮零售业态需求旺盛",
+      "带租约出售，购入即获稳定现金流，无空窗期",
+      "198㎡大面积，适合连锁品牌或大型业态，租客稳定性强",
+      "毛回报6.4%，净回报5.0%，新宿商圈优质商业物业",
+      "符合新耐震标准，可做饮食店，配备电梯，业态灵活"
+    ]
+  }
+]

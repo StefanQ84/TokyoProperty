@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOKYO PROPERTIES · Premium Japan Investment</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0C0C0C;
+  --white:#FAFAF8;
+  --stone:#F2EFE9;
+  --stone2:#E8E4DC;
+  --ink:#1A1A1A;
+  --muted:#8A8580;
+  --gold:#9B7D3C;
+  --gold-pale:#C9A96E;
+  --rule:rgba(0,0,0,0.1);
+  --rule-strong:rgba(0,0,0,0.18);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--white);color:var(--ink);
+  font-family:'Instrument Sans',sans-serif;
+  font-weight:300;font-size:15px;line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.25rem 3.5rem;
+  transition:background 0.4s,border-color 0.4s;
+  border-bottom:1px solid transparent;
+}
+nav.scrolled{background:rgba(250,250,248,0.96);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;letter-spacing:0.05em;color:white;transition:color 0.4s}
+nav.scrolled .nav-logo{color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:2.5rem}
+.nav-link{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-decoration:none;transition:color 0.3s}
+nav.scrolled .nav-link{color:var(--muted)}
+.nav-link:hover,.nav-link:focus{color:white}
+nav.scrolled .nav-link:hover{color:var(--black)}
+.nav-cta{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.55rem 1.4rem;border:1px solid rgba(255,255,255,0.45);color:white;text-decoration:none;transition:all 0.3s}
+nav.scrolled .nav-cta{border-color:var(--rule-strong);color:var(--black)}
+.nav-cta:hover{background:white;color:var(--black)}
+nav.scrolled .nav-cta:hover{background:var(--black);color:white;border-color:var(--black)}
+
+/* HERO */
+.hero{height:100vh;min-height:700px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=2000&q=85') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.92) 0%,rgba(8,8,8,0.3) 55%,rgba(8,8,8,0.55) 100%)}
+.hero-body{position:relative;z-index:2;padding:0 3.5rem 4.5rem}
+.hero-kicker{font-size:0.62rem;letter-spacing:0.55em;text-transform:uppercase;color:var(--gold-pale);display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem}
+.hero-kicker::before{content:'';width:36px;height:1px;background:var(--gold-pale)}
+h1.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8vw,7.5rem);font-weight:900;line-height:0.92;letter-spacing:-0.025em;color:white;text-transform:uppercase;margin-bottom:2.75rem}
+h1.hero-h1 em{font-style:italic;font-weight:400;color:rgba(255,255,255,0.5);display:block;font-size:0.62em}
+.hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding-top:2rem}
+.hero-desc{font-size:0.88rem;color:rgba(255,255,255,0.55);max-width:420px;line-height:1.85}
+.hero-stats{display:flex;gap:3.5rem;text-align:right;flex-shrink:0}
+.hs-val{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1;margin-bottom:0.25rem}
+.hs-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.38)}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--black);padding:1.1rem 0;overflow:hidden}
+.marquee-track{display:flex;width:max-content;animation:scroll-x 26s linear infinite}
+.m-item{font-family:'Playfair Display',serif;font-size:0.78rem;font-style:italic;color:rgba(255,255,255,0.28);padding:0 2.5rem;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.07)}
+@keyframes scroll-x{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION */
+.wrap{padding:7rem 3.5rem}
+.wrap-sm{padding:5rem 3.5rem}
+.bg-stone{background:var(--stone)}
+.bg-black{background:var(--black)}
+
+.eyebrow{font-size:0.6rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.85rem;margin-bottom:1.25rem}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--gold)}
+h2.display{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,4rem);font-weight:900;line-height:1;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:0}
+h2.display em{font-style:italic;font-weight:400}
+.lead{color:var(--muted);font-size:0.88rem;max-width:480px;line-height:1.85;margin-top:1.25rem}
+
+/* CATEGORIES */
+.cat-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule-strong);border-left:1px solid var(--rule-strong)}
+.cat-card{padding:2.5rem 2rem 2rem;border-right:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);position:relative;transition:background 0.35s;overflow:hidden}
+.cat-card:hover{background:var(--black);color:white}
+.cat-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:rgba(0,0,0,0.06);line-height:1;margin-bottom:1.25rem;letter-spacing:-0.04em;transition:color 0.35s}
+.cat-card:hover .cat-num{color:rgba(255,255,255,0.05)}
+.cat-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.4rem}
+.cat-meta{font-size:0.72rem;color:var(--gold);letter-spacing:0.05em;margin-bottom:1rem}
+.cat-card:hover .cat-meta{color:var(--gold-pale)}
+.cat-for{font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+.cat-card:hover .cat-for{color:rgba(255,255,255,0.5)}
+.cat-rate{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ink);line-height:1}
+.cat-card:hover .cat-rate{color:var(--gold-pale)}
+.cat-rate-label{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem}
+.cat-card:hover .cat-rate-label{color:rgba(255,255,255,0.4)}
+.cat-foot{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease}
+.cat-card:hover .cat-foot{transform:scaleX(1)}
+
+/* PROPERTIES */
+.prop-intro{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:0;border-bottom:1px solid var(--rule-strong);padding-bottom:2.5rem}
+.props-list{border-bottom:1px solid var(--rule-strong)}
+.prop-row{border-bottom:1px solid var(--rule);transition:background 0.25s;cursor:pointer}
+.prop-row:last-child{border-bottom:none}
+.prop-row:hover{background:rgba(255,255,255,0.6)}
+.prop-summary{display:grid;grid-template-columns:2.5fr 1.4fr 1fr 1fr 40px;align-items:center;gap:1.5rem;padding:2rem 0}
+.prop-tag{font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;padding:0.2rem 0.7rem;border:1px solid;display:inline-block;margin-bottom:0.75rem}
+.tag-sale{color:var(--black);border-color:var(--black)}
+.tag-rent{color:var(--gold);border-color:var(--gold)}
+.tag-whole{color:var(--muted);border-color:var(--muted)}
+.prop-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;line-height:1.2;margin-bottom:0.3rem}
+.prop-loc{font-size:0.78rem;color:var(--muted)}
+.prop-price{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;line-height:1.1}
+.prop-price-sub{font-size:0.7rem;color:var(--muted);margin-top:0.2rem}
+.prop-yield{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--gold);line-height:1}
+.prop-yield-label{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem}
+.prop-spec-val{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700}
+.prop-spec-label{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem}
+.prop-toggle{font-size:1.1rem;color:var(--muted);background:none;border:1px solid var(--rule-strong);cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;transition:all 0.3s;flex-shrink:0;font-family:monospace;line-height:1}
+.prop-toggle:hover{background:var(--black);color:white;border-color:var(--black)}
+.prop-row.open .prop-toggle{background:var(--black);color:white;border-color:var(--black);transform:rotate(45deg)}
+
+.prop-detail{display:none;border-top:1px solid var(--rule);padding:2.5rem 0 3rem}
+.prop-row.open .prop-detail{display:block}
+.prop-img-strip{display:flex;gap:8px;margin-bottom:2.5rem;overflow-x:auto;scrollbar-width:none}
+.prop-img-strip::-webkit-scrollbar{display:none}
+.prop-img{height:220px;width:auto;max-width:380px;object-fit:cover;flex-shrink:0;display:block}
+.prop-detail-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
+.detail-col h4{font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);padding-bottom:0.75rem;border-bottom:1px solid var(--rule);margin-bottom:1rem}
+.detail-line{display:flex;justify-content:space-between;align-items:baseline;padding:0.45rem 0;border-bottom:1px solid var(--rule);font-size:0.82rem}
+.detail-line span:first-child{color:var(--muted)}
+.detail-line span:last-child{font-weight:400;text-align:right;max-width:58%}
+.highlight-line{font-size:0.82rem;padding:0.4rem 0;display:flex;gap:0.6rem;align-items:flex-start;border-bottom:1px solid var(--rule)}
+.highlight-line::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:0.05rem}
+
+/* SERVICE */
+.service-grid{display:grid;grid-template-columns:repeat(5,1fr);margin-top:4rem;border-top:1px solid var(--rule-strong);border-left:1px solid var(--rule-strong)}
+.svc{padding:2.5rem 1.75rem;border-right:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);transition:background 0.3s}
+.svc:hover{background:var(--stone2)}
+.svc-n{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;letter-spacing:-0.04em;color:rgba(0,0,0,0.07);line-height:1;margin-bottom:1.25rem}
+.svc-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.6rem}
+.svc-desc{font-size:0.78rem;color:var(--muted);line-height:1.75}
+
+/* SUMMARY */
+.sum-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:4rem;border:1px solid var(--rule-strong)}
+.sum-card{padding:3rem 2.5rem;border-right:1px solid var(--rule-strong)}
+.sum-card:last-child{border-right:none}
+.sum-icon{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1.25rem;letter-spacing:-0.04em}
+.sum-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:1rem}
+.sum-body{font-size:0.82rem;color:var(--muted);line-height:1.9}
+.sum-body strong{color:var(--gold);font-weight:500}
+
+/* CTA */
+.cta-wrap{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center}
+.cta-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.8rem);font-weight:900;line-height:1;letter-spacing:-0.02em;text-transform:uppercase;color:white}
+.cta-h em{font-style:italic;font-weight:400;color:var(--gold-pale)}
+.cta-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);padding:2.5rem;min-width:310px}
+.cta-label{font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.5rem}
+.cta-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:white;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+.cta-row{display:flex;align-items:center;gap:0.85rem;font-size:0.8rem;color:rgba(255,255,255,0.55);margin-bottom:0.6rem}
+.cta-row-key{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.28);min-width:72px}
+.cta-row a{color:white;text-decoration:none;transition:color 0.3s}
+.cta-row a:hover{color:var(--gold-pale)}
+.cta-btns{display:flex;flex-direction:column;gap:0.5rem;margin-top:2rem}
+.btn{display:block;text-align:center;text-decoration:none;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;padding:0.9rem 1.5rem;font-family:'Instrument Sans',sans-serif;transition:all 0.3s;cursor:pointer;border:none}
+.btn-fill{background:white;color:var(--black)}
+.btn-fill:hover{background:var(--gold-pale)}
+.btn-ghost{background:none;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.65)}
+.btn-ghost:hover{border-color:var(--gold-pale);color:var(--gold-pale)}
+
+/* FOOTER */
+footer{padding:2rem 3.5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--rule);font-size:0.7rem;color:var(--muted)}
+.footer-logo{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;letter-spacing:0.05em;color:var(--ink)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .service-grid{grid-template-columns:1fr 1fr 1fr}
+  .prop-summary{grid-template-columns:1fr 1fr 1fr 40px;gap:1rem}
+  .prop-spec-val,.prop-spec-label{display:none}
+}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-link{display:none}
+  .wrap,.wrap-sm{padding:4rem 1.5rem}
+  .hero-body{padding:0 1.5rem 3rem}
+  h1.hero-h1{font-size:3rem}
+  .hero-bottom{flex-direction:column;gap:2rem;align-items:flex-start}
+  .hero-stats{gap:2rem}
+  .cat-grid,.cat-header,.prop-detail-cols,.service-grid,.sum-grid,.cta-wrap{grid-template-columns:1fr}
+  .prop-summary{grid-template-columns:1fr auto;gap:1rem}
+  .prop-price,.prop-yield{display:none}
+  .sum-card{border-right:none;border-bottom:1px solid var(--rule-strong)}
+  .cta-card{min-width:0;width:100%}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo">TOKYO PROPERTIES</div>
+  <div class="nav-right">
+    <a href="#categories" class="nav-link">投资品类</a>
+    <a href="#properties" class="nav-link">精选物业</a>
+    <a href="#contact" class="nav-cta">联系 YanLiang</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-body">
+    <div class="hero-kicker">新加坡投资者专属 · Japan Premium Real Estate</div>
+    <h1 class="hero-h1">
+      INVEST<br>IN<br><em>Tokyo</em>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        东京永久产权 · 年化回报4%–7%<br>
+        全中文一站式服务，为新加坡投资者打造的日本不动产精选组合
+      </p>
+      <div class="hero-stats">
+        <div>
+          <div class="hs-val">4–7%</div>
+          <div class="hs-label">年化回报率</div>
+        </div>
+        <div>
+          <div class="hs-val">S$125K</div>
+          <div class="hs-label">起投门槛</div>
+        </div>
+        <div>
+          <div class="hs-val">5</div>
+          <div class="hs-label">精选物业</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="m-item">Permanent Freehold</span><span class="m-item">东京核心地段</span><span class="m-item">High Yield Returns</span><span class="m-item">稳定租赁市场</span><span class="m-item">Full Chinese Support</span><span class="m-item">永久产权</span><span class="m-item">Premium Tokyo Estates</span><span class="m-item">低空置率</span><span class="m-item">Permanent Freehold</span><span class="m-item">东京核心地段</span><span class="m-item">High Yield Returns</span><span class="m-item">稳定租赁市场</span><span class="m-item">Full Chinese Support</span><span class="m-item">永久产权</span><span class="m-item">Premium Tokyo Estates</span><span class="m-item">低空置率</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="wrap" id="categories">
+  <div class="cat-header">
+    <div>
+      <div class="eyebrow">四大投资品类</div>
+      <h2 class="display">INVESTMENT<br><em>Categories</em></h2>
+    </div>
+    <p class="lead" style="margin-top:0">从低门槛小户型到整栋商业物业，四大品类覆盖不同风险偏好与资金规模，精准匹配您的投资目标。</p>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card"><div class="cat-num">01</div><div class="cat-name">投资公寓</div><div class="cat-meta">稳定现金流 · 入门首选</div><div class="cat-for">稳健长期投资者<br>永久产权、出租率高</div><div class="cat-rate">4% – 7%</div><div class="cat-rate-label">年化回报率</div><div class="cat-foot"></div></div>
+    <div class="cat-card"><div class="cat-num">02</div><div class="cat-name">一户建 / 住宅</div><div class="cat-meta">自住 + 长期保值</div><div class="cat-for">家庭自住、留学家庭<br>资产传承者</div><div class="cat-rate" style="font-size:1.1rem;line-height:1.5">抗跌性强</div><div class="cat-rate-label">空间私密 · 自由灵活</div><div class="cat-foot"></div></div>
+    <div class="cat-card"><div class="cat-num">03</div><div class="cat-name">高级塔楼公寓</div><div class="cat-meta">高端配置 · 地标物业</div><div class="cat-for">高净值人群<br>品质自住者</div><div class="cat-rate">3.3% – 3.5%</div><div class="cat-rate-label">年化回报率</div><div class="cat-foot"></div></div>
+    <div class="cat-card"><div class="cat-num">04</div><div class="cat-name">整栋商办 / 宿舍</div><div class="cat-meta">多元高现金流</div><div class="cat-for">企业投资者<br>创业者</div><div class="cat-rate">4.23%</div><div class="cat-rate-label">年化回报率</div><div class="cat-foot"></div></div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="wrap bg-stone" id="properties">
+  <div class="prop-intro">
+    <div>
+      <div class="eyebrow">重点投资案例</div>
+      <h2 class="display">FEATURED<br><em>Properties</em></h2>
+      <p class="lead">五套精选物业，全程新币标价。点击查看完整投资数据。</p>
+    </div>
+  </div>
+
+  <div class="props-list">
+
+    <div class="prop-row" id="p1" onclick="toggleProp('p1')">
+      <div class="prop-summary">
+        <div><span class="prop-tag tag-sale">出售</span><div class="prop-name">新宿一室投资公寓</div><div class="prop-loc">东京新宿区 · 步行至新宿站 6–12 分钟</div></div>
+        <div><div class="prop-price">S$ 165,722</div><div class="prop-price-sub">参考：¥1,880万日元</div></div>
+        <div><div class="prop-yield">4.85%</div><div class="prop-yield-label">年化回报</div></div>
+        <div><div class="prop-spec-val">16.6㎡</div><div class="prop-spec-label">专有面积</div></div>
+        <button class="prop-toggle" onclick="event.stopPropagation();toggleProp('p1')">＋</button>
+      </div>
+      <div class="prop-detail">
+        <!-- 图片区：替换 src 为实际图片链接；多张图复制 img 标签 -->
+        <div class="prop-img-strip"><img src="YOUR_IMAGE_URL" alt="新宿公寓" class="prop-img" onerror="this.parentElement.style.display='none'"></div>
+        <div class="prop-detail-cols">
+          <div class="detail-col"><h4>财务数据</h4>
+            <div class="detail-line"><span>售价</span><span>S$ 165,722</span></div>
+            <div class="detail-line"><span>月租金</span><span>S$ 670</span></div>
+            <div class="detail-line"><span>年净收入</span><span>S$ 6,135</span></div>
+            <div class="detail-line"><span>年化回报</span><span style="color:var(--gold);font-weight:500">4.85%</span></div>
+            <div class="detail-line"><span>产权</span><span>永久产权</span></div>
+          </div>
+          <div class="detail-col"><h4>物业规格</h4>
+            <div class="detail-line"><span>专有面积</span><span>16.6㎡</span></div>
+            <div class="detail-line"><span>阳台面积</span><span>6.4㎡</span></div>
+            <div class="detail-line"><span>户型</span><span>1室1厅</span></div>
+            <div class="detail-line"><span>至新宿站</span><span>步行 6–12 分钟</span></div>
+            <div class="detail-line"><span>地区</span><span>东京新宿区</span></div>
+          </div>
+          <div class="detail-col"><h4>投资亮点</h4>
+            <div class="highlight-line">东京核心地段新宿，人流量极高</div>
+            <div class="highlight-line">单身白领租客稳定，出租率接近满租</div>
+            <div class="highlight-line">入门门槛最低，适合新加坡投资者试水</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-row" id="p2" onclick="toggleProp('p2')">
+      <div class="prop-summary">
+        <div><span class="prop-tag tag-whole">整栋出租</span><div class="prop-name">池袋整栋一室公寓</div><div class="prop-loc">东京丰岛区池袋 · 步行至车站 12 分钟</div></div>
+        <div><div class="prop-price">S$ 125,173</div><div class="prop-price-sub">参考：¥1,420万日元</div></div>
+        <div><div class="prop-yield">4.23%</div><div class="prop-yield-label">年化回报</div></div>
+        <div><div class="prop-spec-val">317㎡</div><div class="prop-spec-label">建筑总面积</div></div>
+        <button class="prop-toggle" onclick="event.stopPropagation();toggleProp('p2')">＋</button>
+      </div>
+      <div class="prop-detail">
+        <div class="prop-img-strip"><img src="YOUR_IMAGE_URL" alt="池袋整栋" class="prop-img" onerror="this.parentElement.style.display='none'"></div>
+        <div class="prop-detail-cols">
+          <div class="detail-col"><h4>财务数据</h4>
+            <div class="detail-line"><span>售价</span><span>S$ 125,173</span></div>
+            <div class="detail-line"><span>月收入</span><span>S$ 9,250</span></div>
+            <div class="detail-line"><span>年收入</span><span>S$ 110,900</span></div>
+            <div class="detail-line"><span>年化回报</span><span style="color:var(--gold);font-weight:500">4.23%</span></div>
+            <div class="detail-line"><span>运营状态</span><span>满租运营</span></div>
+          </div>
+          <div class="detail-col"><h4>物业规格</h4>
+            <div class="detail-line"><span>建筑总面积</span><span>317.28㎡</span></div>
+            <div class="detail-line"><span>土地面积</span><span>135.16㎡</span></div>
+            <div class="detail-line"><span>楼层</span><span>地上4层</span></div>
+            <div class="detail-line"><span>业态</span><span>店铺 + 事务所 + 住宅</span></div>
+            <div class="detail-line"><span>至车站</span><span>步行 12 分钟</span></div>
+          </div>
+          <div class="detail-col"><h4>投资亮点</h4>
+            <div class="highlight-line">4层整栋，多业态混合经营降低空置风险</div>
+            <div class="highlight-line">购入即有现金流，满租运营</div>
+            <div class="highlight-line">池袋站商圈，商业氛围成熟稳定</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-row" id="p3" onclick="toggleProp('p3')">
+      <div class="prop-summary">
+        <div><span class="prop-tag tag-sale">出售</span><div class="prop-name">芝浦岛塔楼公寓</div><div class="prop-loc">东京港区 · 步行至车站 9–10 分钟 · 彩虹桥夜景</div></div>
+        <div><div class="prop-price">S$ 2,097,970</div><div class="prop-price-sub">参考：¥2.38亿日元</div></div>
+        <div><div class="prop-yield">3.3–3.5%</div><div class="prop-yield-label">年化回报</div></div>
+        <div><div class="prop-spec-val">83.8㎡</div><div class="prop-spec-label">2LDK+WIC</div></div>
+        <button class="prop-toggle" onclick="event.stopPropagation();toggleProp('p3')">＋</button>
+      </div>
+      <div class="prop-detail">
+        <div class="prop-img-strip"><img src="YOUR_IMAGE_URL" alt="芝浦岛塔楼" class="prop-img" onerror="this.parentElement.style.display='none'"></div>
+        <div class="prop-detail-cols">
+          <div class="detail-col"><h4>财务数据</h4>
+            <div class="detail-line"><span>售价</span><span>S$ 2,097,970</span></div>
+            <div class="detail-line"><span>月租金</span><span>S$ 2,936 – 3,129</span></div>
+            <div class="detail-line"><span>年化回报</span><span style="color:var(--gold);font-weight:500">3.3% – 3.5%</span></div>
+            <div class="detail-line"><span>产权</span><span>永久产权</span></div>
+          </div>
+          <div class="detail-col"><h4>物业规格</h4>
+            <div class="detail-line"><span>专有面积</span><span>83.80㎡</span></div>
+            <div class="detail-line"><span>阳台</span><span>12.20㎡</span></div>
+            <div class="detail-line"><span>户型</span><span>2LDK + WIC</span></div>
+            <div class="detail-line"><span>装修</span><span>全新装修</span></div>
+            <div class="detail-line"><span>至车站</span><span>步行 9–10 分钟</span></div>
+          </div>
+          <div class="detail-col"><h4>投资亮点</h4>
+            <div class="highlight-line">直面彩虹桥，城市地标景观无可替代</div>
+            <div class="highlight-line">24小时安保管理，高端居住社区</div>
+            <div class="highlight-line">港区核心，资产抗跌性极强</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-row" id="p4" onclick="toggleProp('p4')">
+      <div class="prop-summary">
+        <div><span class="prop-tag tag-sale">出售</span><div class="prop-name">大崎西城塔楼 W 栋</div><div class="prop-loc">东京品川区 · 大崎站直连，步行 1 分钟</div></div>
+        <div><div class="prop-price">S$ 2,891,320</div><div class="prop-price-sub">参考：¥3.28亿日元</div></div>
+        <div><div class="prop-yield" style="font-size:0.95rem;line-height:1.4;color:var(--ink)">超高层地标</div><div class="prop-yield-label">39层 · 品川区</div></div>
+        <div><div class="prop-spec-val">109㎡</div><div class="prop-spec-label">2LDK+WIC</div></div>
+        <button class="prop-toggle" onclick="event.stopPropagation();toggleProp('p4')">＋</button>
+      </div>
+      <div class="prop-detail">
+        <div class="prop-img-strip"><img src="YOUR_IMAGE_URL" alt="大崎西城塔楼" class="prop-img" onerror="this.parentElement.style.display='none'"></div>
+        <div class="prop-detail-cols">
+          <div class="detail-col"><h4>物业规格</h4>
+            <div class="detail-line"><span>售价</span><span>S$ 2,891,320</span></div>
+            <div class="detail-line"><span>专有面积</span><span>109.14㎡</span></div>
+            <div class="detail-line"><span>阳台</span><span>5.39㎡</span></div>
+            <div class="detail-line"><span>楼层</span><span>39层超高层</span></div>
+            <div class="detail-line"><span>装修</span><span>全新装修</span></div>
+          </div>
+          <div class="detail-col"><h4>交通配套</h4>
+            <div class="detail-line"><span>大崎站</span><span>步行 1 分钟（直连）</span></div>
+            <div class="detail-line"><span>品川站</span><span>1站可达</span></div>
+            <div class="detail-line"><span>新宿</span><span>约15分钟</span></div>
+            <div class="detail-line"><span>东京站</span><span>约20分钟</span></div>
+          </div>
+          <div class="detail-col"><h4>投资亮点</h4>
+            <div class="highlight-line">39层挑高客厅，景观资源极为稀缺</div>
+            <div class="highlight-line">交通便利极致，大崎站1分钟步行圈</div>
+            <div class="highlight-line">超大户型，适合高端自住或外籍租客</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-row" id="p5" onclick="toggleProp('p5')">
+      <div class="prop-summary">
+        <div><span class="prop-tag tag-whole">整栋出租</span><div class="prop-name">百人町三丁目整栋收租楼</div><div class="prop-loc">东京新宿区 · 4条地铁线 10–17 分钟可达</div></div>
+        <div><div class="prop-price">S$ 2,626,870</div><div class="prop-price-sub">参考：¥2.98亿日元</div></div>
+        <div><div class="prop-yield">4.23%</div><div class="prop-yield-label">年化回报</div></div>
+        <div><div class="prop-spec-val">317㎡</div><div class="prop-spec-label">4层整栋</div></div>
+        <button class="prop-toggle" onclick="event.stopPropagation();toggleProp('p5')">＋</button>
+      </div>
+      <div class="prop-detail">
+        <div class="prop-img-strip"><img src="YOUR_IMAGE_URL" alt="百人町整栋收租楼" class="prop-img" onerror="this.parentElement.style.display='none'"></div>
+        <div class="prop-detail-cols">
+          <div class="detail-col"><h4>财务数据</h4>
+            <div class="detail-line"><span>售价</span><span>S$ 2,626,870</span></div>
+            <div class="detail-line"><span>月收入</span><span>S$ 9,250</span></div>
+            <div class="detail-line"><span>年收入</span><span>S$ 110,900</span></div>
+            <div class="detail-line"><span>年化回报</span><span style="color:var(--gold);font-weight:500">4.23%</span></div>
+            <div class="detail-line"><span>运营状态</span><span>满租运营</span></div>
+          </div>
+          <div class="detail-col"><h4>物业规格</h4>
+            <div class="detail-line"><span>建筑总面积</span><span>317.28㎡</span></div>
+            <div class="detail-line"><span>土地面积</span><span>135.16㎡</span></div>
+            <div class="detail-line"><span>业态</span><span>店铺 + 事务所 + 住宅</span></div>
+            <div class="detail-line"><span>楼层</span><span>地上4层</span></div>
+            <div class="detail-line"><span>产权</span><span>永久产权</span></div>
+          </div>
+          <div class="detail-col"><h4>投资亮点</h4>
+            <div class="highlight-line">新宿区核心，4条地铁线辐射多方向</div>
+            <div class="highlight-line">满租运营，多业态降低空置风险</div>
+            <div class="highlight-line">永久产权整栋，稀缺资产配置选择</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="wrap" id="service">
+  <div class="eyebrow">一站式全流程</div>
+  <h2 class="display">HOW WE<br><em>Serve You</em></h2>
+  <p class="lead">从线上看房到过户签约，全程中文专员陪伴，解决海外投资的每一道壁垒。</p>
+  <div class="service-grid">
+    <div class="svc"><div class="svc-n">01</div><div class="svc-title">海外看房</div><div class="svc-desc">线上实景看房，高清视频带看，足不出户了解每套物业细节。</div></div>
+    <div class="svc"><div class="svc-n">02</div><div class="svc-title">中文专员</div><div class="svc-desc">全流程中文咨询，专业顾问一对一服务，零语言障碍。</div></div>
+    <div class="svc"><div class="svc-n">03</div><div class="svc-title">贷款 &amp; 税务</div><div class="svc-desc">融资咨询、税务合规规划，最大化您的投资净收益。</div></div>
+    <div class="svc"><div class="svc-n">04</div><div class="svc-title">出租托管</div><div class="svc-desc">物业代运营、收租管理，坐享被动现金流，省心省力。</div></div>
+    <div class="svc"><div class="svc-n">05</div><div class="svc-title">过户签约</div><div class="svc-desc">全程陪同办理，解决海外投资壁垒，安全完成资产交割。</div></div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section class="wrap-sm bg-stone">
+  <div class="eyebrow">投资总结</div>
+  <h2 class="display">WHY<br><em>Tokyo?</em></h2>
+  <div class="sum-grid">
+    <div class="sum-card">
+      <div class="sum-icon">I.</div>
+      <div class="sum-title">收益分层，精准匹配</div>
+      <div class="sum-body">小户型公寓 <strong>4%–7%</strong> 收益最高；整栋物业 <strong>4.23%</strong>，规模化现金流；高端塔楼 <strong>3.3%–3.5%</strong>，稳健配置。<br><br>收益与资产体量、风险偏好精准对应。</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-icon">II.</div>
+      <div class="sum-title">日本市场核心优势</div>
+      <div class="sum-body"><strong>永久产权</strong>，资产完整归属；租赁市场成熟，<strong>空置率极低</strong>；法制健全，租约保障双方权益。<br><br>东京核心地段资产<strong>长期抗通胀</strong>保值。</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-icon">III.</div>
+      <div class="sum-title">新加坡投资者最佳切入</div>
+      <div class="sum-body"><strong>S$125,000起</strong>可入市，无ABSD限制，汇率对冲；<br><br>中长期可配置高端或整栋物业，实现<strong>资产国际化多元配置</strong>。</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap bg-black" id="contact">
+  <div class="cta-wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-pale)">立即开始</div>
+      <div class="cta-h">READY TO<br>INVEST IN<br><em>Tokyo?</em></div>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:1.5rem;max-width:340px;line-height:1.85">获取专属投资方案，我们的中文顾问将在24小时内与您联系。</p>
+    </div>
+    <div class="cta-card">
+      <div class="cta-label">专属顾问</div>
+      <div class="cta-name">YanLiang</div>
+      <div class="cta-row"><span class="cta-row-key">WhatsApp</span><a href="https://wa.me/6580581650">+65 8058 1650</a></div>
+      <div class="cta-row"><span class="cta-row-key">语言</span><span>中文 · English</span></div>
+      <div class="cta-btns">
+        <a href="https://wa.me/6580581650" class="btn btn-fill">WhatsApp 立即咨询</a>
+        <a href="YOUR_LISTING_URL_HERE" class="btn btn-ghost">浏览所有房源 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">TOKYO PROPERTIES</div>
+  <div>© 2025 · 本页数据仅供参考，实际以合同为准</div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+function toggleProp(id){
+  const row=document.getElementById(id),isOpen=row.classList.contains('open');
+  document.querySelectorAll('.prop-row.open').forEach(r=>{if(r.id!==id)r.classList.remove('open')});
+  row.classList.toggle('open',!isOpen);
+}
+</script>
+</body>
+</html>
